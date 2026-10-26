@@ -1,0 +1,10 @@
+<h1>Persona mediante services HTTP</h1>
+<ul>
+@for (p of personas; track p) {
+  <li style="color: red">ID: {{ p.IdPersona }}</li>
+  <li>Nombre: {{ p.Nombre }}</li>
+  <li>EMAIL: {{p.Email}}</li>
+  <li>EDAD: {{p.Edad}}</li>
+  <hr>
+}
+</ul>
