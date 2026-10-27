@@ -1,0 +1,45 @@
+<div class="container py-4">
+  <h1 class="mb-4 text-primary">Plantilla</h1>
+
+  <form #funcionesform="ngForm" class="row g-3 align-items-end mb-4">
+    <div class="col-md-6">
+      <label for="funcion" class="form-label">Función</label>
+      <select #funcion id="funcion" class="form-select">
+        @for (f of funciones; track f) {
+          <option value="{{ f }}">{{ f }}</option>
+        }
+      </select>
+    </div>
+    <div class="col-auto">
+      <button type="button" class="btn btn-primary" (click)="mostrarPlantilla()">
+        Mostrar plantilla
+      </button>
+    </div>
+  </form>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID empleado</th>
+        <th>ID hospital</th>
+        <th>ID sala</th>
+        <th>Apellido</th>
+        <th>Función</th>
+        <th>Turno</th>
+        <th>Salario</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (p of plantilla; track p.idEmpleado) {
+        <tr>
+          <td>{{ p.idEmpleado }}</td>
+          <td>{{ p.idHospital }}</td>
+          <td>{{ p.idSala }}</td>
+          <td>{{ p.apellido }}</td>
+          <td>{{ p.funcion }}</td>
+          <td>{{ p.turno }}</td>
+          <td>{{ p.salario }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>

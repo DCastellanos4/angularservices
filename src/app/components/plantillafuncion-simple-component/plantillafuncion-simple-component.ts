@@ -22,6 +22,5 @@ export class PlantillafuncionSimpleComponent implements OnInit {
     let f = this.funcion.nativeElement.value;
     this.plantilla = await this._sp.getPlantilla(f);
     this._cdr.detectChanges()
-    
   }
 }
